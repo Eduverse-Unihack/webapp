@@ -1,9 +1,11 @@
 @import './styles/variables.scss';
 @import './styles/animations.scss';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Oswald:wght@200&display=swap');
 
 html, body, #root {
   height: 100%;
   background-color: $white !important;
+  font-family: 'Oswald';
 }
 
 code {

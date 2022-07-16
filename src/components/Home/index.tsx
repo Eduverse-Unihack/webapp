@@ -1,7 +1,12 @@
+import { useNavigate } from 'react-router-dom';
 import ImgAsset from '../../assets';
 import './style.scss';
 
 function Home() {
+  const navigate = useNavigate();
+	const goToClassPage = () => {
+    navigate('./classes');
+	};
   return (
 		<div className='Frame1_1_Frame1'>
 			<div className='Group2'>
@@ -19,10 +24,10 @@ function Home() {
 			<img className='Vector2' src = {ImgAsset.Frame1_1_Vector2} />
 			<img className='Vector3' src = {ImgAsset.Frame1_1_Vector3} />
 			<span className='MANGTRINGHIMMETAVERSENGIODC'>MANG TRẢI NGHIỆM METAVERSE ĐẾN GIÁO DỤC</span>
-			<div className='Frame3'>
+			<div className='Frame3' onClick={goToClassPage}>
 				<span className='KHMPHNGAY'>KHÁM PHÁ NGAY</span>
 			</div>
-			<span className='KHMPHNGAY_1'>KHÁM PHÁ NGAY</span>
+			<span className='KHMPHNGAY_1' onClick={goToClassPage}>KHÁM PHÁ NGAY</span>
 			<span className='WHITEPAPER'>WHITE PAPER</span>
 			<img className='Vector4' src = {ImgAsset.Frame1_1_Vector4} />
 		</div>

@@ -1,7 +1,12 @@
+import { useNavigate } from 'react-router-dom';
 import ImgAsset from '../../assets';
 import './style.scss';
 
 function Classes() {
+  const navigate = useNavigate();
+	const goToHomePage = () => {
+		navigate('../');
+	};
   return (
 		<div className='Frame2_Frame2'>
 			<div className='Group2'>
@@ -10,7 +15,7 @@ function Classes() {
 				</div>
 				<div className='Ellipse2'/>
 			</div>
-			<span className='EDUVERSE'>EDUVERSE</span>
+			<span className='EDUVERSE' onClick={goToHomePage}>EDUVERSE</span>
 			<img className='Vector1' src = {ImgAsset.Frame2_Vector1} />
 			<img className='Vector2' src = {ImgAsset.Frame2_Vector2} />
 			<span className='LPSINHHC'>LỚP SINH HỌC</span>
